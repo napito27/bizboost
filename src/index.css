@@ -39,3 +39,13 @@
 /*=======================================
     BREAKPOINTS
 =========================================*/
+/* 
+button:hover {
+  background-color: ;
+  transition: .3s ease all
+  transform: translateY(-5px) */
+
+* {
+  margin: 0;
+  padding: 0;
+}
