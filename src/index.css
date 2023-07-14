@@ -1,6 +1,30 @@
 /*=======================================
     #Variables
 =========================================*/
+:root {
+  --baseFont: 20px;
+  --white: #ffffff;
+  --background: #0a0c11;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --gradient-start: #1b3385;
+  --gradient-end: #25c5c9;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--secondary-font);
+  font-size: 0.9375rem;
+  color: #d0d0d0;
+  background: var(--primary-bg);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 /**
   TABLE OF CONTENTS
@@ -20,12 +44,12 @@
   Breakpoints.............................Global responsive breakpoints definitions
 */
 
-
+/* global */
 /*=======================================
     COLORS
 =========================================*/
 
-/*=======================================
+/*======================================= 
     TYPOGRAPHY
 =========================================*/
 /* 
@@ -45,7 +69,139 @@ button:hover {
   transition: .3s ease all
   transform: translateY(-5px) */
 
-* {
+:root {
+  --primary-font: "Poppins";
+  --seconday-font: "courier+prime";
+  --primary-bg: #0a0c11;
+  --primary-text-color: #667085;
+  --accent-color: #2292b1;
+
+  --white: #ffffff;
+  --link-text-color: #abadb3;
+  --link-secondary-color: #2292b1;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  color: var(--primary-text-color);
+  background: var(--primary-bg);
+}
+
+header {
+  display: flex;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--primary-font);
+  font-weight: var(--bold);
+  color: var(--white);
+  margin: 0;
+}
+h1 {
+  Font size: 2.7em; 
+  Font Weight: var(--medium);
+  Line height: 4.3em;
+}
+
+h2 {
+  Font size: 2em ;
+  Font Weight: var(--medium);
+  Line height: 2.85em;
+}
+
+h3 {
+  Font size: 1.47em; 
+  Font Weight: var(--medium);
+  Line height: 1.92em;
+}
+
+h4 {
+  Font size: 1.4em; 
+  Font Weight: var(--bold);
+  Line height: 2.1em;
+}
+
+h5 {
+  Font size: 1.2em;
+  Font Weight: var(--bold);
+  Line height: 1.6em;
+}
+
+h6 {
+  Font size: 1.44em;
+  Font Weight: ;var(--semi-bold)
+  Line height: 1.4em;
+}
+
+.hero * {
+  /* margin: 6px 164px 0px 164px; */
+  border: solid 1px whitesmoke;
+}
+
+.hero header * {
+  flex: 1;
+}
+.navigation ul {
+  display: flex;
+  justify-content: center;
+}
+.navigation li {
+  display: flex;
+}
+.socials {
+  display: flex;
+}
+.logo {
+  color: var(--white);
+  /* font-size: 50px; */
+}
+ul {
+  color: var(--link-text-color);
+  list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+/* ul li {
+  display: inline-block;
+  position: relative;
+} */
+
+/* .socials {
+  justify-content: flex-end;
+} */
+
+/* .navigation ul {
+  display: flex;
+  text-decoration: none;
+}
+
+.socials {
+  display: flex;
+  text-decoration: none;
+  justify-content: flex-end;
+} */
+
+/* video section */
+.wrapper {
+  margin: 0 auto;
+  width: 90%;
+  padding-top: 5%;
+}
+
+.videowrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0px;
+}
+.wrapper iframe {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 80%;
 }
