@@ -1,29 +1,26 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
 /*=======================================
     #Variables
 =========================================*/
 :root {
   --baseFont: 20px;
-  --white: #ffffff;
-  --background: #0a0c11;
-  --medium: 500;
-  --semi-bold: 600;
+  --primary-font: "poppins";
+  --seconday-font: "courier+prime";
+
   --bold: 700;
+  --medium: 500;
+  --normal: 400;
+  --semi-bold: 600;
+
+  --accent-color: #2292b1;
   --gradient-start: #1b3385;
   --gradient-end: #25c5c9;
-}
-
-html {
-  box-sizing: border-box;
-  font-family: var(--secondary-font);
-  font-size: 0.9375rem;
-  color: #d0d0d0;
-  background: var(--primary-bg);
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+  --primary-bg: #0a0c11;
+  --primary-text-color: #abadb3;
+  --white: #ffffff;
 }
 
 /**
@@ -49,17 +46,128 @@ html {
     COLORS
 =========================================*/
 
+/*=============================
+    Brand Colors
+===============================*/
+.accents {
+  color: var(--accent-color);
+}
+
+/*=============================
+    Neutral Colors
+===============================*/
+.white {
+  color: var(--white);
+}
+.black {
+  background: var(--primary-bg);
+}
+.gray {
+  color: var(--primary-text-color);
+}
+/*=============================
+    Utility Colors
+===============================*/
+.succes {
+  color: green;
+}
+.warning {
+  color: yellow;
+}
+.danger {
+  color: red;
+}
+.info {
+  color: blue;
+}
+.gradient {
+  background: linear-gradient(
+    90deg,
+    var(--gradient-start) 0%,
+    var(--gradient-end) 100%
+  );
+}
 /*======================================= 
-    TYPOGRAPHY
+    TYPOGRAPHY 
 =========================================*/
-/* 
-  1. The Poppins font. This is the main font.
-  https://fonts.googleapis.com/css?family=Poppins
+/*============================= 
+    Font Famillies
+===============================*/
+.primary-font {
+  font-family: var(--primary-font);
+}
+.secondary-font {
+  font-family: var(--seconday-font);
+}
+/*============================= 
+    Font Weights
+===============================*/
+.normal {
+  font-weight: var(--normal);
+}
+.medium {
+  font-weight: var(--medium);
+}
+.semi-bold {
+  font-weight: var(--semi-bold);
+}
+.bold {
+  font-weight: var(--bold);
+}
+/*============================= 
+    Font Sizes
+===============================*/
+.basefont {
+  font-size: var(--baseFont);
+}
+/*============================= 
+    Headings
+===============================*/
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--primary-font);
+  font-weight: var(--bold);
+  color: var(--white);
+  margin: 0;
+}
+h1 {
+  font-size: 2.7em;
+  font-weight: var(--medium);
+  line-height: 4.3em;
+}
 
-  2. The Courier font. This is used for <pre> code.
-  https://fonts.googleapis.com/css?family=Poppins
-*/
+h2 {
+  font-size: 2em;
+  font-weight: var(--medium);
+  line-height: 2.85em;
+}
 
+h3 {
+  font-size: 1.47em;
+  font-weight: var(--medium);
+  line-height: 1.92em;
+}
+
+h4 {
+  font-size: 1.4em;
+  font-weight: var(--bold);
+  line-height: 2.1em;
+}
+
+h5 {
+  font-size: 1.2em;
+  font-weight: var(--bold);
+  line-height: 1.6em;
+}
+
+h6 {
+  font-size: 1.44em;
+  font-weight: var(--semi-bold);
+  line-height: 1.4em;
+}
 /*=======================================
     BREAKPOINTS
 =========================================*/
@@ -68,140 +176,112 @@ button:hover {
   background-color: ;
   transition: .3s ease all
   transform: translateY(-5px) */
-
-:root {
-  --primary-font: "Poppins";
-  --seconday-font: "courier+prime";
-  --primary-bg: #0a0c11;
-  --primary-text-color: #667085;
-  --accent-color: #2292b1;
-
-  --white: #ffffff;
-  --link-text-color: #abadb3;
-  --link-secondary-color: #2292b1;
-}
-
 html {
   box-sizing: border-box;
   font-family: var(--primary-font);
-  color: var(--primary-text-color);
   background: var(--primary-bg);
+  color: var(--primary-text-color);
 }
 
-header {
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.hero header {
   display: flex;
+  justify-content: space-around;
+  border: solid 1px white;
+  margin-top: 50px;
 }
-
-h1, h2, h3, h4, h5 {
-  font-family: var(--primary-font);
-  font-weight: var(--bold);
-  color: var(--white);
-  margin: 0;
-}
-h1 {
-  Font size: 2.7em; 
-  Font Weight: var(--medium);
-  Line height: 4.3em;
-}
-
-h2 {
-  Font size: 2em ;
-  Font Weight: var(--medium);
-  Line height: 2.85em;
-}
-
-h3 {
-  Font size: 1.47em; 
-  Font Weight: var(--medium);
-  Line height: 1.92em;
-}
-
-h4 {
-  Font size: 1.4em; 
-  Font Weight: var(--bold);
-  Line height: 2.1em;
-}
-
-h5 {
-  Font size: 1.2em;
-  Font Weight: var(--bold);
-  Line height: 1.6em;
-}
-
-h6 {
-  Font size: 1.44em;
-  Font Weight: ;var(--semi-bold)
-  Line height: 1.4em;
-}
-
-.hero * {
-  /* margin: 6px 164px 0px 164px; */
-  border: solid 1px whitesmoke;
-}
-
-.hero header * {
-  flex: 1;
-}
-.navigation ul {
-  display: flex;
-  justify-content: center;
-}
-.navigation li {
-  display: flex;
-}
-.socials {
-  display: flex;
-}
-.logo {
-  color: var(--white);
-  /* font-size: 50px; */
-}
-ul {
-  color: var(--link-text-color);
+header .logo {
+  color: var(--accent-color);
   list-style-type: none;
+  text-decoration: none;
+  font-weight: var(--semi-bold);
+  font-family: var(--primary-font);
+  font-size: 3em;
+}
+nav {
+  /* margin: 0px;
+  padding: 0px;
+  max-width: 30%; */
+  border: solid 1px white;
+  vertical-align: center;
+  box-align: center;
+}
+nav.navigation ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  gap: 40px;
+}
+nav.navigation ul li {
+  font-size: 1.3em;
+  font-family: var(--primary-font);
+  font-weight: var(--semi-bold);
+  color: var(--link-text-color);
+  line-height: 1.75em;
+}
+nav.navigation ul :first-child {
+  color: var(--accent-color);
+}
+ul.socials {
   margin: 0;
   padding: 0;
-}
-
-/* ul li {
-  display: inline-block;
-  position: relative;
-} */
-
-/* .socials {
-  justify-content: flex-end;
-} */
-
-/* .navigation ul {
   display: flex;
-  text-decoration: none;
+  border: solid 1px white;
+  align-items: center;
+  /* max-width: 12%; */
 }
-
-.socials {
+ul.socials li {
+  padding: 0 10px 0 20px;
+  list-style-type: none;
+}
+main h1 span {
+  opacity: 0.5;
+}
+main.title {
+  border: solid 1px gray;
   display: flex;
-  text-decoration: none;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.title h1 {
+  font-size: 6em;
+  line-height: 1.5em;
+  font-weight: var(--medium);
+  text-align: center;
+  margin-top: 100px;
+}
+.title p {
+  font-size: 2em;
+  line-height: 1.5em;
+  font-weight: var(--normal);
+  text-align: center;
+  margin-bottom: 40px;
+}
+main .button1 {
+  background-color: var(--accent-color);
+  font-size: 1em;
+  border-radius: 30px;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  font-weight: var(--normal);
+  width: 174px;
+  height: 60px;
+  color: var(--white);
+  margin-bottom: 10px;
+  border: none;
+}
+/* .vid {
+  display: flex;
+  flex: 1;
+  height: 600px;
+  justify-content: center;
+  border: solid 5px white;
 } */
-
-/* video section */
-.wrapper {
-  margin: 0 auto;
-  width: 90%;
-  padding-top: 5%;
-}
-
-.videowrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
-  height: 0px;
-}
-.wrapper iframe {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  width: 100%;
-  height: 80%;
-}
