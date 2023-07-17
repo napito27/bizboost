@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
     <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Poppins"
-      rel="poppins"
     />
     <link
+      rel="stylesheet"
       href="https://fonts.google.com/specimen/Courier+Prime?query"
       rel="courier+prime"
     />
@@ -22,18 +23,18 @@
       <header>
         <a href="/" class="logo">BizBoost</a>
         <nav class="navigation">
-          <ul>
+          <ul class="menu">
             <li>Home</li>
-            <li>Templates</li>
             <li>
               <a href="#">
+                Templates
                 <img src="./img/arrow.svg" alt=">" />
               </a>
-              <!-- <ul class="dropdown">
-                <li>right sidebar</li>
-                <li>no sidebar</li>
-                <li>style guide</li>
-              </ul> -->
+              <ul class="submenu">
+                <li><a href="">right sidebar</a></li>
+                <li><a href="">no sidebar</a></li>
+                <li><a href="">style guide</a></li>
+              </ul>
             </li>
             <li>Blog</li>
             <li>Contact</li>
@@ -69,6 +70,7 @@
     <section>
       <figure class="vid">
         <video
+          width="100%"
           controls
           loop
           src="https://fse.catchthemes.com/bizboost-free/wp-content/themes/bizboost/assets/video/video-featured.mp4"
@@ -76,16 +78,6 @@
           Video no compatible
         </video>
       </figure>
-      <!-- <div class="wrapper">
-        <div class="videowrapper">
-          <iframe
-            src="https://fse.catchthemes.com/bizboost-free/wp-content/themes/bizboost/assets/video/video-featured.mp4"
-            frameborder="0"
-          >
-            Video No Compatible
-          </iframe>
-        </div>
-      </div> -->
     </section>
 
     <!-- our services section -->
