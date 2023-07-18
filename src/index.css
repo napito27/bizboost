@@ -254,6 +254,7 @@ nav.navigation ul li {
 
 .menu li:nth-child(2):hover ul {
   display: block;
+  transition: all 2s ease;
 }
 
 .submenu {
@@ -282,11 +283,10 @@ nav.navigation ul li {
 .submenu li:hover,
 a:hover {
   color: var(--accent-color);
-  transition: all ease;
+  padding-left: 18px;
+  transition: all 0.5s ease;
 }
-.submenu span:hover {
-  transform: translateX(5px);
-}
+
 ul.socials {
   margin: 0;
   padding: 0;
