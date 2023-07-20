@@ -47,9 +47,7 @@ body {
   font-family: var(--primary-font);
   background: var(--primary-bg);
   color: var(--primary-text-color);
-  margin: 0;
-  padding: 0;
-  height: 100vh;
+  font-size: var(--base-font);
 }
 *,
 *::before,
@@ -83,18 +81,6 @@ body {
 /*=============================
     Utility Colors
 ===============================*/
-.succes {
-  color: green;
-}
-.warning {
-  color: yellow;
-}
-.danger {
-  color: red;
-}
-.info {
-  color: blue;
-}
 .gradient {
   background: linear-gradient(
     90deg,
@@ -183,6 +169,10 @@ h6 {
   font-weight: var(--semi-bold);
   line-height: 1.4em;
 }
+.logo:hover {
+  color: var(--accent-color);
+  transition: 0.5s ease;
+}
 /*=======================================
     BREAKPOINTS
 =========================================*/
@@ -191,12 +181,15 @@ button:hover {
   background-color: ;
   transition: .3s ease all
   transform: translateY(-5px) */
+section.hero {
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
 .hero header {
   display: flex;
   justify-content: space-around;
-  /* border: solid 1px white; */
-  margin-top: 20px;
+  margin-top: 15px;
 }
 header .logo {
   color: var(--white);
@@ -204,27 +197,35 @@ header .logo {
   text-decoration: none;
   font-weight: var(--bold);
   font-family: var(--primary-font);
-  font-size: 2em;
+  font-size: 1.75em;
   line-height: 2.4em;
 }
-.logo:hover {
+
+.menu li a:hover {
   color: var(--accent-color);
-  transition: all 0.5s ease;
+  transition: 0.3s ease;
 }
 nav {
   vertical-align: center;
   box-align: center;
   align-items: end;
 }
+
+video {
+  max-width: 1400px;
+  /* max-height: 570px; */
+  object-fit: contain;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
 nav.navigation ul {
   display: flex;
   list-style-type: none;
   align-items: center;
   gap: 40px;
-  align-items: end;
   padding: 30px;
 }
-nav.navigation ul li {
+nav.navigation a {
   font-size: 0.9em;
   font-family: var(--primary-font);
   font-weight: var(--normal);
@@ -233,6 +234,10 @@ nav.navigation ul li {
 }
 #home {
   color: var(--accent-color);
+}
+.submenu li a:hover {
+  color: var(--accent-color);
+  transition: 0.3s ease;
 }
 .menu li a {
   list-style-type: none;
@@ -254,7 +259,7 @@ nav.navigation ul li {
 
 .menu li:nth-child(2):hover ul {
   display: block;
-  transition: all 2s ease;
+  transition: all 0.5s ease;
 }
 
 .submenu {
@@ -280,25 +285,32 @@ nav.navigation ul li {
   font-size: 0.75em;
   font-weight: var(--normal);
 }
-.submenu li:hover,
-a:hover {
-  color: var(--accent-color);
-  padding-left: 18px;
-  transition: all 0.5s ease;
-}
 
 ul.socials {
   margin: 0;
   padding: 0;
   display: flex;
-  /* border: solid 1px white; */
   align-items: center;
-  /* max-width: 12%; */
 }
 ul.socials li {
   padding: 0 10px 0 20px;
   list-style-type: none;
+  position: relative;
 }
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: -9px;
+  left: 9px;
+}
+
+.circle:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: all 0.5s ease;
+}
+
 main h1 span {
   opacity: 0.5;
 }
@@ -306,20 +318,19 @@ main.title {
   inset: 0;
   margin: auto;
   display: flex;
-  width: 760px;
+  width: 700px;
   flex-direction: column;
   align-items: center;
 }
 .title h1 {
   font-size: 4em;
-  /* line-height: 1.5em; */
   font-weight: var(--medium);
   text-align: center;
   margin-top: 90px;
   margin-bottom: 40px;
 }
 .title p {
-  font-size: 1.75em;
+  font-size: 1.2em;
   line-height: 1.5em;
   font-weight: var(--normal);
   text-align: center;
@@ -353,13 +364,13 @@ main .button1 {
   margin-top: 50px;
   margin-bottom: 120px;
 }
-
+/* SERVICES SECTION */
 .services {
   display: flex;
-  inset: 0;
-  margin: auto;
-  width: 1400px;
-  margin: 50px 0px 50px 0px;
+  margin: 0 auto;
+  max-width: 1400px;
+  max-height: 570px;
+  margin-bottom: 115px;
 }
 .services figure img {
   width: 560px;
@@ -378,7 +389,7 @@ main .button1 {
   line-height: 1.8;
   font-weight: 600;
   font-style: normal;
-  font-size: 16px;
+  font-size: 0.8em;
   margin-top: 100px;
 }
 .service-info h2 {
@@ -421,3 +432,24 @@ section .button1 {
   color: var(--primary-bg);
   transition: all 0.5s ease;
 }
+.ticker-chart {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1400px;
+  max-height: 105px;
+  justify-content: space-between;
+}
+.ticker-chart div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ticker-chart div h2 {
+  line-height: 1.2em;
+}
+.ticker-chart div p {
+  text-transform: capitalize;
+}
+/* WHAT WE DO SECTION */
+
