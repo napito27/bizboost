@@ -552,14 +552,14 @@ section .button1 {
   height: 600px; 
   background-image: url(img/pc-background.svg);
   /* opacity: 0.6; */
-  position: absolute;
+  /* position: absolute; */
   display: flex;
 }
 .inner-small-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+  /* position: relative; */
   margin: auto auto;
   width: 630px;
   height: 211px;
@@ -567,3 +567,10 @@ section .button1 {
 
 
 /* FOOTER */
+.inner-container {
+  border: dashed 5px white;
+  margin: 0 auto;
+  max-width: 1400px;
+  max-height: 204px;
+  
+}
