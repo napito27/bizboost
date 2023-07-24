@@ -550,10 +550,15 @@ section .button1 {
 .background {
   width: 100%; 
   height: 600px; 
+  background-color: #0a0c11;
   background-image: url(img/pc-background.svg);
+  opacity: 0.6;
   /* opacity: 0.6; */
   /* position: absolute; */
+  background-position: left;
+  background-repeat: no-repeat;
   display: flex;
+  border: solid 10px #1b3385;
 }
 .inner-small-container {
   display: flex;
@@ -567,10 +572,3 @@ section .button1 {
 
 
 /* FOOTER */
-.inner-container {
-  border: dashed 5px white;
-  margin: 0 auto;
-  max-width: 1400px;
-  max-height: 204px;
-  
-}
