@@ -131,6 +131,11 @@ h3 {
   font-weight: var(--bold);
 }
 
+h4 {
+  font-size: 1.2em;
+  line-height: 1.72em;
+}
+
 h4,
 h5 {
   font-weight: var(--bold);
@@ -312,6 +317,7 @@ main > * {
   margin-top: 0;
 }
 
+/* ===== WHAT WE DO SECTION =====*/
 .section-title {
   height: 100px;
   margin-bottom: 20px;
@@ -377,6 +383,138 @@ main > * {
   transition: all 0.5s ease;
 }
 
+/* ===== PROMOTIONAL CONTACT SECTION ===== */
+.prom-contact {
+  display: flex;
+  height: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45px;
+  gap: 17px;
+  margin-bottom: 45px;
+  position: relative;
+}
+
+.prom-contact img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.6;
+  object-fit: cover;
+}
+
+.prom-contact h2,
+.prom-contact h6,
+.prom-contact a {
+  text-align: center;
+  z-index: 1;
+}
+
+/* ===== FOOTER SECTION ====== */
+.footer-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.subscribe {
+  height: 170px;
+}
+
+.logo a h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  line-height: 2.5em;
+  font-weight: var(--bold);
+}
+.subscribe h4 {
+  font-size: 1em;
+  font-weight: var(--normal);
+  line-height: 2em;
+}
+
+.input-email {
+  font-size: 0.7em;
+  padding: 13px;
+  background-color: transparent;
+  border: solid 2px var(--border-color);
+  color: var(--body-text);
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  color: var(--body-text);
+  width: 200px;
+}
+
+.email-btn {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border: 0;
+  padding: 9px 17px 11px;
+  margin-left: -6px;
+  font-size: 0.8em;
+  font-weight: var(--light);
+}
+
+.quick-links {
+  height: 200px;
+}
+
+.quick-links h2,
+.support h2 {
+  font-size: 0.9em;
+  font-weight: var(--medium);
+  line-height: 2em;
+}
+
+.selected {
+  color: var(--primary);
+}
+
+.quick-links div,
+.support div {
+  list-style: none;
+}
+
+.bottom-nav li a,
+.support li a {
+  font-size: 0.8em;
+  font-weight: var(--normal);
+  line-height: 2.8em;
+}
+
+.support {
+  height: 250px;
+  padding-top: 20px;
+}
+
+.copyright {
+  display: flex;
+  height: 40px;
+}
+
+.copyright p {
+  font-size: 0.7em;
+}
+
+.cp-logo {
+  color: var(--white);
+}
+
+.bottom-border {
+  border-top: solid 2px var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.socials2 {
+  height: 70px;
+}
+
 /*=======================================
     TABLET & DESKTOP BREAKPOINTS
 =========================================*/
@@ -404,6 +542,8 @@ main > * {
 
   .blocks {
     padding: 0 88px;
+    max-width: 1400px;
+    margin: auto;
   }
 
   .hero,
@@ -553,5 +693,25 @@ main > * {
     left: 0;
     bottom: -7px;
     transition: all 0.5s ease;
+  }
+
+  .what-we-do {
+    height: 500px;
+  }
+
+  .prom-contact {
+    height: 500px;
+  }
+
+  .subscribe,
+  .quick-links,
+  .support {
+    width: 320px;
+  }
+
+  .footer-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
