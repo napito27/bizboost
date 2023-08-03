@@ -1,0 +1,59 @@
+.cursor {
+  height: 7px;
+  width: 7px;
+  background-color: #2292b1;
+  border: 2px solid #2292b1;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 100ms;
+  transition-timing-function: ease;
+  animation: cursorAnim 0.5s infinite alternate;
+  /* z-index: 2; */
+}
+
+/* .cursor::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  /* border: 8px solid #2292b1; */
+/* border-radius: 50%; */
+/* opacity: 0.5; */
+/* top: -50px;
+  left: -50px; */
+/* animation: cursorAnim2 0.5s infinite alternate; */
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(2.5);
+  }
+}
+
+/* @keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(3);
+  }
+} */
+
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2.2);
+  }
+  100% {
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+
+.expand {
+  animation: cursorAnim3 0.5s forwards;
+}
