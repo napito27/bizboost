@@ -8,6 +8,7 @@
   transition-duration: 100ms;
   transition-timing-function: ease;
   animation: cursorAnim 0.5s infinite alternate;
+  /* z-index: 2; */
 }
 
 /* .cursor::after {

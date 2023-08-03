@@ -91,6 +91,7 @@ body {
   background: var(--background);
   margin: 0;
   padding: 0;
+  cursor: none;
 }
 
 *,
@@ -516,8 +517,16 @@ main > * {
   color: var(--white);
 }
 
-.bottom-border {
+.bottom-border::before {
+  content: " ";
+  position: absolute;
   border-top: solid 2px var(--border-color);
+  width: 100%;
+  height: 2px;
+  left: 0;
+}
+
+.bottom-border {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -731,21 +740,29 @@ main > * {
   }
 
   .prom-contact {
-    /* width: 100vw;
-    padding-left: -88px; */
     height: 500px;
   }
 
   .subscribe,
   .quick-links,
   .support {
-    width: 320px;
+    width: 420px;
   }
 
   .footer-box {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+  }
+
+  .input-email {
+    width: 250px;
+  }
+
+  .support {
+    padding-top: 0px;
   }
 
   .bottom-border {
