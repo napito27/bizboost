@@ -6,8 +6,10 @@
     <title>BizBoost Mobile First</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" />
     <link rel="stylesheet" href="src/index.css" />
+    <link rel="stylesheet" href="src/cursor.css" />
   </head>
   <body>
+    <div class="cursor"></div>
     <section class="blocks">
       <!-- Hero Section -->
       <section class="hero">
@@ -189,10 +191,13 @@
       <!-- Promotional Contact -->
       <section class="bg-img">
         <div class="prom-contact">
+          <span class="overlay"></span>
           <img class="bg-image" src="src/img/pc-background.svg" alt="pc-background" />
-          <h6>promotional contact</h6>
-          <h2>ready to work together?</h2>
-          <a href="#" class="gradient-button">Contact Us</a>
+          <div class="content">
+            <h6>promotional contact</h6>
+            <h2>ready to work together?</h2>
+            <a href="#" class="gradient-button">Contact Us</a>
+          </div>
         </div>
       </section>
       <!-- End Promotional Contact -->
@@ -297,5 +302,8 @@
       </section>
       <!-- End Footer Section -->
     </section>
+
+    <!--  JavaScript File For Cursor-->
+    <script src="src/cursor.js"></script>
   </body>
 </html>
